@@ -3,7 +3,7 @@ import Task from "./Task";
 
 const TaskList = ({ tasks, setTasks, filter }) => {
   return (
-    <div>
+    <div className="list-container">
       <ul>
         {filter.map((task) => (
           <Task

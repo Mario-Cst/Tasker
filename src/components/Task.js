@@ -1,6 +1,6 @@
 import React from "react";
-
-const Task = ({ text, task, tasks, setTasks }) => {
+import "./task.css";
+const Task = ({ text, description, task, tasks, setTasks }) => {
   const deleteTask = () => {
     setTasks(tasks.filter((el) => el.id !== task.id));
   };
@@ -18,8 +18,11 @@ const Task = ({ text, task, tasks, setTasks }) => {
     );
   };
   return (
-    <div>
-      <li>{text}</li>
+    <div className="main-task-card">
+      <label> Título de la tarea:</label>
+      <p> {text}</p>
+      <label> Descripción</label>
+      <p>{description}</p>
       <button onClick={completeHandler}>Completar</button>
       <button onClick={deleteTask}>Borrar</button>
     </div>

@@ -4,7 +4,8 @@ import Form from "./components/Form";
 import TaskList from "./components/TaskList";
 
 function App() {
-  const [inputText, setInputText] = useState("");
+  //const [inputText, setInputText] = useState("");
+  const [inputText, setInputText] = useState({});
   const [tasks, setTasks] = useState([]);
   const [status, setStatus] = useState("all");
   const [filter, setFilter] = useState([]);
@@ -47,15 +48,17 @@ function App() {
 
   return (
     <div className="App">
-      <header>Tasker</header>
-      <Form
-        tasks={tasks}
-        setTasks={setTasks}
-        inputText={inputText}
-        setInputText={setInputText}
-        setStatus={setStatus}
-      />
-      <TaskList filter={filter} setTasks={setTasks} tasks={tasks} />
+      <header className="header-container">Tasker</header>
+      <div className="main-container">
+        <Form
+          tasks={tasks}
+          setTasks={setTasks}
+          inputText={inputText}
+          setInputText={setInputText}
+          setStatus={setStatus}
+        />
+        <TaskList filter={filter} setTasks={setTasks} tasks={tasks} />
+      </div>
     </div>
   );
 }
