@@ -1,0 +1,8 @@
+.form-container {
+  background-color: red;
+  border-radius: 15px;
+}
+.input {
+  font-size: large;
+  height: 32px;
+}
